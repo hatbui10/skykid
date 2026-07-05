@@ -326,7 +326,7 @@ function copyAbsentList() { const total = myClass.students.length; const absentS
 function callStudent(phone) { if(phone === 'Chưa có') { alert('Chưa có SĐT!'); return; } window.location.href = 'tel:' + phone; }
 </script>
 </body>
-</html>
+</html> 
 
     function updateStatus(id, status) { const student = myClass.students.find(s => s.id === id); student.status = status; saveData(); renderStudentList(); renderAbsentList(); updateStats(); }
 function updateNote(id, value) { const student = myClass.students.find(s => s.id === id); student.note = value; saveData(); renderAbsentList(); }
