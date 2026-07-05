@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hệ Thống Điểm Danh - SKY - KID</title>
+<title>Lớp SKY-KID</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
 body { background-color: #050508; color: #e0e0e6; padding: 30px 3px 20px 3px; }
@@ -14,7 +14,6 @@ h3 { color: #ff007f; text-shadow: 0 0 10px rgba(255, 0, 127, 0.5); font-size: 1.
 .class-panel { background: #0a0a14; border: 1px solid #00f0ff; border-radius: 6px; padding: 15px 8px; box-shadow: 0 0 15px rgba(0, 240, 255, 0.15); }
 .add-student-box { display: flex; flex-direction: column; gap: 10px; background: #0d0d1a; border: 1px solid #ffd700; border-radius: 4px; padding: 12px 10px; margin-bottom: 15px; }
 .add-student-box input { width: 100%; background: #050508; border: 1px solid #333; color: #fff; padding: 12px 10px; font-size: 0.9rem; border-radius: 4px; outline: none; }
-.add-student-box input:focus { border-color: #ffd700; }
 .btn-add { background: #ffd700; color: #000; border: none; padding: 12px; font-weight: bold; font-size: 0.9rem; border-radius: 4px; cursor: pointer; text-transform: uppercase; }
 .absent-section { background: rgba(255, 0, 127, 0.05); border: 1px dashed #ff007f; border-radius: 4px; padding: 10px; margin-bottom: 20px; }
 .absent-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
@@ -43,10 +42,10 @@ h3 { color: #ff007f; text-shadow: 0 0 10px rgba(255, 0, 127, 0.5); font-size: 1.
 </style>
 </head>
 <body>
-<h2>Hệ Thống Điểm Danh</h2>
+<h2>Lớp: SKY-KID</h2>
 <div class="class-stats" id="classStats">Sĩ số: 0 | Có mặt: 0 | Vắng: 0</div>
 <div class="class-panel">
-<h3>Danh Sách: SKY - KID</h3>
+<h3>Danh Sách: SKY-KID</h3>
 <br>
 <div class="add-student-box">
 <input type="text" id="newStudentName" placeholder="Dòng 1: Nhập họ và tên...">
@@ -55,7 +54,7 @@ h3 { color: #ff007f; text-shadow: 0 0 10px rgba(255, 0, 127, 0.5); font-size: 1.
 </div>
 <div class="absent-section">
 <div class="absent-header">
-<span class="absent-title">DANH SÁCH VẮNG KÈM GHI CHÚ</span>
+<span class="absent-title">DANH SÁCH VẮNG </span>
 <button class="copy-btn" onclick="copyAbsentList()">Copy</button>
 </div>
 <ul class="absent-list" id="absentList"><li><em>Chưa có học sinh vắng</em></li></ul>
@@ -101,87 +100,151 @@ const defaultStudents = [
     },
     {
         "id": 6,
-        "name": "Lan Anh em Tuấn Anh B",
-        "phone": "Chưa có",
-        "status": "present",
-        "note": ""
-    },
-    {
-        "id": 7,
         "name": "Đặng Khánh Ngân",
         "phone": "0942093566",
         "status": "present",
         "note": ""
     },
     {
-        "id": 8,
+        "id": 7,
         "name": "Trần Lê Tuệ Linh",
         "phone": "0988742202",
         "status": "present",
         "note": ""
     },
     {
-        "id": 9,
+        "id": 8,
         "name": "Nguyễn Trâm Anh",
         "phone": "0919403848",
         "status": "present",
         "note": ""
     },
     {
-        "id": 10,
+        "id": 9,
         "name": "Nguyễn Tú Anh",
         "phone": "0919403848",
         "status": "present",
         "note": ""
     },
     {
-        "id": 11,
+        "id": 10,
         "name": "Nguyễn Hà My",
         "phone": "0943681990",
         "status": "present",
         "note": ""
     },
     {
-        "id": 12,
+        "id": 11,
         "name": "Hoàng Ngọc Phương Linh",
         "phone": "0912731673",
         "status": "present",
         "note": ""
     },
     {
-        "id": 13,
+        "id": 12,
         "name": "Thái Phương Uyên",
         "phone": "0376788868",
         "status": "present",
         "note": ""
     },
     {
-        "id": 14,
+        "id": 13,
         "name": "Nguyễn Bảo Hân",
         "phone": "0989082066",
         "status": "present",
         "note": ""
     },
     {
-        "id": 15,
+        "id": 14,
         "name": "Đoàn Đắc Nhật",
         "phone": "0976001849",
         "status": "present",
         "note": ""
+    },
+    {
+        "id": 15,
+        "name": "Nguyễn Bảo Linh",
+        "phone": "0912445905",
+        "status": "present",
+        "note": ""
+    },
+    {
+        "id": 16,
+        "name": "Nguyễn Đỗ Nhật Minh (Hấu)",
+        "phone": "0943399389",
+        "status": "present",
+        "note": ""
+    },
+    {
+        "id": 17,
+        "name": "Đặng Phong",
+        "phone": "0838222857",
+        "status": "present",
+        "note": ""
+    },
+    {
+        "id": 18,
+        "name": "Phùng Gia Chính",
+        "phone": "0365818988",
+        "status": "present",
+        "note": ""
+    },
+    {
+        "id": 19,
+        "name": "Nguyễn Ngọc Mai",
+        "phone": "0974961488",
+        "status": "present",
+        "note": ""
+    },
+    {
+        "id": 20,
+        "name": "Nguyễn Vũ Phương Linh",
+        "phone": "0965954884",
+        "status": "present",
+        "note": ""
+    },
+    {
+        "id": 21,
+        "name": "Nguyễn Hạ Trí An",
+        "phone": "0902100314",
+        "status": "present",
+        "note": ""
+    },
+    {
+        "id": 22,
+        "name": "Đinh Bảo Châu Minh",
+        "phone": "0987622584",
+        "status": "present",
+        "note": ""
+    },
+    {
+        "id": 23,
+        "name": "Lê Huyền Anh",
+        "phone": "0914974023",
+        "status": "present",
+        "note": ""
+    },
+    {
+        "id": 24,
+        "name": "Nguyễn Huy Phúc (Bon)",
+        "phone": "0975500418",
+        "status": "present",
+        "note": ""
     }
 ];
-let myClass = { name: "SKY - KID", students: [] };
-function loadData() { const saved = localStorage.getItem('classData_SKY%20-%20KID'); if(saved) { myClass.students = JSON.parse(saved); } else { myClass.students = defaultStudents; saveData(); } }
-function saveData() { localStorage.setItem('classData_SKY%20-%20KID', JSON.stringify(myClass.students)); }
+let myClass = { name: "SKY-KID", students: [] };
+function displayPhone(p) { if(!p || p==='Chưa có') return 'Chưa có'; let c = p.replace(/\s+/g, ''); if(c.length===10) return c.substring(0,4)+' '+c.substring(4,7)+' '+c.substring(7); return p; }
+function loadData() { const saved = localStorage.getItem('classData_SKY-KID'); if(saved) { myClass.students = JSON.parse(saved); } else { myClass.students = defaultStudents; saveData(); } }
+function saveData() { localStorage.setItem('classData_SKY-KID', JSON.stringify(myClass.students)); }
 window.onload = function() { loadData(); renderStudentList(); renderAbsentList(); updateStats(); };
 function updateStats() { const total = myClass.students.length; const absent = myClass.students.filter(s => s.status === 'absent').length; const present = total - absent; document.getElementById('classStats').innerText = 'Sĩ số: ' + total + ' | Có mặt: ' + present + ' | Vắng: ' + absent; }
-function addNewStudent() { const nameInput = document.getElementById('newStudentName'); const phoneInput = document.getElementById('newStudentPhone'); const name = nameInput.value.trim(); const phone = phoneInput.value.trim() || 'Chưa có'; if(name === '') { alert('Vui lòng nhập tên!'); return; } const nextId = myClass.students.length > 0 ? Math.max(...myClass.students.map(s => s.id)) + 1 : 1; myClass.students.push({ id: nextId, name: name, phone: phone, status: 'present', note: '' }); saveData(); nameInput.value = ''; phoneInput.value = ''; renderStudentList(); renderAbsentList(); updateStats(); }
+function addNewStudent() { const nameInput = document.getElementById('newStudentName'); const phoneInput = document.getElementById('newStudentPhone'); const name = nameInput.value.trim(); const phone = phoneInput.value.trim().replace(/\s+/g, '') || 'Chưa có'; if(name === '') { alert('Vui lòng nhập tên!'); return; } const nextId = myClass.students.length > 0 ? Math.max(...myClass.students.map(s => s.id)) + 1 : 1; myClass.students.push({ id: nextId, name: name, phone: phone, status: 'present', note: '' }); saveData(); nameInput.value = ''; phoneInput.value = ''; renderStudentList(); renderAbsentList(); updateStats(); }
 function deleteStudent(id, name) { if(confirm('Bạn có chắc chắn muốn XÓA học sinh ' + name + '?')) { myClass.students = myClass.students.filter(s => s.id !== id); myClass.students.forEach((s, idx) => { s.id = idx + 1; }); saveData(); renderStudentList(); renderAbsentList(); updateStats(); } }
-function renderStudentList() { const container = document.getElementById('studentList'); container.innerHTML = ''; myClass.students.forEach(student => { const card = document.createElement('div'); card.className = 'student-card status-' + student.status; const absentActive = student.status === 'absent' ? 'active' : ''; const presentActive = student.status === 'present' ? 'active' : ''; card.innerHTML = '<div class="student-info-row"><div class="student-meta"><span class="student-name">' + student.id + '. ' + student.name + '</span><span class="student-phone">SĐT: ' + student.phone + '</span></div><div class="student-actions-right"><button class="btn-call" onclick="callStudent(\'' + student.phone + '\')">📞</button><button class="btn-delete" onclick="deleteStudent(' + student.id + ', \'' + student.name + '\')">🗑️</button></div></div><div class="student-controls-row"><button class="btn-action btn-absent ' + absentActive + '" onclick="updateStatus(' + student.id + ', \'absent\')">Vắng</button><button class="btn-action btn-present ' + presentActive + '" onclick="updateStatus(' + student.id + ', \'present\')">Đi Học</button><select class="note-select" onchange="updateNote(' + student.id + ', this.value)"><option value="" ' + (student.note===''?'selected':'') + '>-- Ghi chú --</option><option value="Không phép" ' + (student.note==='Không phép'?'selected':'') + '>Không phép</option><option value="Có phép" ' + (student.note==='Có phép'?'selected':'') + '>Có phép</option><option value="Muộn" ' + (student.note==='Muộn'?'selected':'') + '>Đi muộn</option><option value="Ốm" ' + (student.note==='Ốm'?'selected':'') + '>Ốm đau</option></select></div>'; container.appendChild(card); }); }
+function renderStudentList() { const container = document.getElementById('studentList'); container.innerHTML = ''; myClass.students.forEach(student => { const card = document.createElement('div'); card.className = 'student-card status-' + student.status; const absentActive = student.status === 'absent' ? 'active' : ''; const presentActive = student.status === 'present' ? 'active' : ''; card.innerHTML = '<div class="student-info-row"><div class="student-meta"><span class="student-name">' + student.id + '. ' + student.name + '</span><span class="student-phone">SĐT: ' + displayPhone(student.phone) + '</span></div><div class="student-actions-right"><button class="btn-call" onclick="callStudent(\'' + student.phone + '\')">📞</button><button class="btn-delete" onclick="deleteStudent(' + student.id + ', \'' + student.name + '\')">🗑️</button></div></div><div class="student-controls-row"><button class="btn-action btn-absent ' + absentActive + '" onclick="updateStatus(' + student.id + ', \'absent\')">Vắng</button><button class="btn-action btn-present ' + presentActive + '" onclick="updateStatus(' + student.id + ', \'present\')">Đi Học</button><select class="note-select" onchange="updateNote(' + student.id + ', this.value)"><option value="" ' + (student.note===''?'selected':'') + '>-- Ghi chú --</option><option value="***" ' + (student.note==='***'?'selected':'') + '>***</option><option value="Đi muộn" ' + (student.note==='Đi muộn' || student.note==='Muộn'?'selected':'') + '>Đi muộn</option><option value="Không nghe máy" ' + (student.note==='Không nghe máy'?'selected':'') + '>Không nghe máy</option><option value="Nghỉ hôm nay" ' + (student.note==='Nghỉ hôm nay'?'selected':'') + '>Nghỉ hôm nay</option><option value="Nghỉ tuần này" ' + (student.note==='Nghỉ tuần này'?'selected':'') + '>Nghỉ tuần này</option><option value="Khi nào đi học sẽ báo lại" ' + (student.note==='Khi nào đi học sẽ báo lại'?'selected':'') + '>Khi nào đi học sẽ báo lại</option><option value="Nghỉ hết tháng 7" ' + (student.note==='Nghỉ hết tháng 7'?'selected':'') + '>Nghỉ hết tháng 7</option><option value="Xin nghỉ hẳn" ' + (student.note==='Xin nghỉ hẳn'?'selected':'') + '>Xin nghỉ hẳn</option><option value="Ốm" ' + (student.note==='Ốm'?'selected':'') + '>Ốm đau</option></select></div>'; container.appendChild(card); }); }
 function updateStatus(id, status) { const student = myClass.students.find(s => s.id === id); student.status = status; saveData(); renderStudentList(); renderAbsentList(); updateStats(); }
 function updateNote(id, value) { const student = myClass.students.find(s => s.id === id); student.note = value; saveData(); renderAbsentList(); }
 function renderAbsentList() { const listContainer = document.getElementById('absentList'); listContainer.innerHTML = ''; const absentStudents = myClass.students.filter(s => s.status === 'absent'); if(absentStudents.length === 0) { listContainer.innerHTML = '<li><em>Chưa có học sinh vắng</em></li>'; return; } absentStudents.forEach(s => { const li = document.createElement('li'); const noteText = s.note ? ' (' + s.note + ')' : ' (Chưa rõ lý do)'; li.innerText = '• ' + s.name + noteText; listContainer.appendChild(li); }); }
-function copyAbsentList() { const total = myClass.students.length; const absentStudents = myClass.students.filter(s => s.status === 'absent'); const absentCount = absentStudents.length; const presentCount = total - absentCount; let text = 'BÁO CÁO ĐIỂM DANH: ' + myClass.name + '\n'; text += 'Sĩ số: ' + total + ' (Có mặt: ' + presentCount + ' | Vắng: ' + absentCount + ')\n-------------------------\nDanh sách học sinh vắng mặt:\n'; if(absentCount === 0) { text += '- Không có học sinh vắng (Lớp đủ).'; } else { absentStudents.forEach((s, idx) => { const note = s.note ? ' (' + s.note + ')' : ''; text += (idx + 1) + '. ' + s.name + note + '\n'; }); } navigator.clipboard.writeText(text).then(() => { alert('Đã copy báo cáo lớp ' + myClass.name + '!'); }).catch(() => { alert('Lỗi copy.'); }); }
+function copyAbsentList() { const total = myClass.students.length; const absentStudents = myClass.students.filter(s => s.status === 'absent'); const absentCount = absentStudents.length; const presentCount = total - absentCount; let text = 'LỚP: ' + myClass.name + '\n'; text += 'Sĩ số: ' + total + ' (Có mặt: ' + presentCount + ' | Vắng: ' + absentCount + ')\n-------------------------\nDanh sách vắng:\n'; if(absentCount === 0) { text += '-Lớp đi học đủ.'; } else { absentStudents.forEach((s, idx) => { const note = s.note ? ' (' + s.note + ')' : ''; text += (idx + 1) + '. ' + s.name + note + '\n'; }); } navigator.clipboard.writeText(text).then(() => { alert('Đã copy báo cáo lớp ' + myClass.name + '!'); }).catch(() => { alert('Lỗi copy.'); }); }
 function callStudent(phone) { if(phone === 'Chưa có') { alert('Chưa có SĐT!'); return; } window.location.href = 'tel:' + phone; }
 </script>
 </body>
